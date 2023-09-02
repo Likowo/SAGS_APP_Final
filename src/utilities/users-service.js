@@ -35,6 +35,12 @@ export function getUser() {
   return token ? JSON.parse(atob(token.split('.')[1])).user : null;
 }
 
+//TODO:
+export function authPage() {
+  localStorage.addItem('AuthPage');
+}
+
+
 export function logOut() {
   localStorage.removeItem('token');
 }
