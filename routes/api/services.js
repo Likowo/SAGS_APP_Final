@@ -1,0 +1,32 @@
+const express = require('express');
+const router = express.Router();
+const servicesCtrl = require('../../controllers/api/services')
+
+//POST --->Create /api/services
+// router.post('/', (req,res) => {
+//     res.send('Services Route')
+// })  /// This logic used to test with thunder client if data renders on page
+
+router.post('/', servicesCtrl.create)
+
+//GET ---> Read /api/getallservices
+router.get('/getallservices',servicesCtrl.getAll)
+// router.get('/getallservices',(req,res)=>{
+//  res.json('This is working')
+// })
+
+
+// Edit ---> Read /api/services
+router.put('/editservice',servicesCtrl.edit)
+
+// DeleteAll services ---> Read /api/services
+router.delete('/deleteall', servicesCtrl.deleteAll)
+
+// DeleteOne service ---> Read /api/services
+router.delete('/deleteone', servicesCtrl.deleteOne)
+
+
+
+
+
+module.exports = router;
