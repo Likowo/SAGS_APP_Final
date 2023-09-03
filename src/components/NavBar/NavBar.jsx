@@ -13,7 +13,7 @@ export default function NavBar({ user, setUser }) {
   function handleAuthPage() {
     userService.authPage();
 
-    // setUser(null);
+    setUser(null);
   }
 
   return (

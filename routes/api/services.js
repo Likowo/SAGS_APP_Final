@@ -9,14 +9,14 @@ const servicesCtrl = require('../../controllers/api/services')
 
 router.post('/', servicesCtrl.create)
 
-//GET ---> Read /api/getallservices
+//GET ---> Read /api/services/getallservices
 router.get('/getallservices',servicesCtrl.getAll)
 // router.get('/getallservices',(req,res)=>{
 //  res.json('This is working')
 // })
 
 
-// Edit ---> Read /api/services
+// Edit ---> Update /api/services
 router.put('/editservice',servicesCtrl.edit)
 
 // DeleteAll services ---> Read /api/services
