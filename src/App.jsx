@@ -9,6 +9,7 @@ import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage';
 // components
 import HomePage from './pages/HomePage/Home'
 import NavBar from './components/NavBar/NavBar';
+import Create from './components/CreateNew/Create';
 // css //TODO: 
 import './App.css';
 
@@ -25,9 +26,9 @@ function App() {
           <Routes>
             <Route path='/home' element={<ServicesPage />} />
             <Route path='/authpage' element={ <AuthPage setUser={setUser} />} />
-            {/* <Route path='/api/services' element={ <Create />} />
-            <Route path='/api/services/editservice/:id' element={ <Edit/>} />
-            <Route path='/api/services/getallservices/:id' element={ <Get />} /> */}
+            <Route path='/api/services' element={ <Create />} />
+            {/* <Route path='/api/services/editservice/:id' element={ <Edit/>} /> */}
+            {/* <Route path='/api/services/getallservices/:id' element={ <Get />} /> */}
 
           </Routes>
         </>
