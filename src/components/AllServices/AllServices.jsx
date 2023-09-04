@@ -24,7 +24,7 @@ function AllServices() {
 
       <div className="w-75 rounded bg-red border shadow p-4">
         <div className="d-flex jsutify-content-end">
-          <Link to="/api/services" className="btn btn-success">
+          <Link to="/add" className="btn btn-success">
             Create a New Service
           </Link>
         </div>
@@ -51,7 +51,7 @@ function AllServices() {
                       <button className="btn btn-sm btn-primary me-2">
                         EDIT
                       </button>
-                      <button  className="btn btn-sm btn-primary me-2">GET/READ</button>
+                     <button><Link to={`/read/${service.id}`}  className="btn btn-sm btn-primary me-2">GET/READ</Link></button> 
                       <button className="btn btn-sm btn-danger">DELETE</button>
                     </td>
                   </tr>);

@@ -7,7 +7,7 @@ const servicesCtrl = require('../../controllers/api/services')
 //     res.send('Services Route')
 // })  /// This logic used to test with thunder client if data renders on page
 
-router.post('/', servicesCtrl.create)
+router.post('/create', servicesCtrl.create)
 
 //GET ---> Read /api/services/getallservices
 router.get('/getallservices',servicesCtrl.getAll)
