@@ -9,7 +9,7 @@ import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage';
 // components
 import HomePage from './pages/HomePage/Home'
 import NavBar from './components/NavBar/NavBar';
-import Create from './components/CreateNew/Create';
+import Create from './components/CreateNewServiceForm/CreateForm';
 // css //TODO: 
 import './App.css';
 
