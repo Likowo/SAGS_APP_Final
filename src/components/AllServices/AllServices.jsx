@@ -51,7 +51,7 @@ function AllServices() {
                       <button className="btn btn-sm btn-primary me-2">
                         EDIT
                       </button>
-                     <button><Link to={`/read/${service.id}`}  className="btn btn-sm btn-primary me-2">GET/READ</Link></button> 
+                     <button><Link to={`/read/${service._id}`}  className="btn btn-sm btn-primary me-2">GET/READ</Link></button> 
                       <button className="btn btn-sm btn-danger">DELETE</button>
                     </td>
                   </tr>);
@@ -60,7 +60,6 @@ function AllServices() {
           </tbody>
         </table>
       </div>
-      {/* //TODO:  To show all service on brower, do a map* */}
     </div>
   );
 }

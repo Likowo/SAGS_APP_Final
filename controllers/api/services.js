@@ -48,8 +48,6 @@ async function deleteOne(req,res) {
     }
 }
 
-
-
 module.exports = {
     create,
     getAll,

@@ -11,5 +11,23 @@ export async function create(serviceData) {
   return data;
 }
 
+export async function read(getById) {
+  // Delegate the network request code to the users-api.js API module
+  // which will ultimately return a JSON Web Token (JWT)
+ const data = await servicesAPI.read(getById);
+
+  // Baby step by returning whatever is sent back by the server
+  return data;
+}
+
+// export async function edit(getById) {
+//   // Delegate the network request code to the users-api.js API module
+//   // which will ultimately return a JSON Web Token (JWT)
+//  const data = await servicesAPI.edit(getById);
+
+//   // Baby step by returning whatever is sent back by the server
+//   return data;
+// }
+
 
 

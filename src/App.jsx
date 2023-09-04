@@ -28,8 +28,8 @@ function App() {
             <Route path='/home' element={<ServicesPage />} />
             <Route path='/authpage' element={ <AuthPage setUser={setUser} />} />
             <Route path='/add' element={ <Create />} />
-            {/* <Route path='/api/services/editservice/:id' element={ <Edit/>} /> */}
-            <Route path='/api/services/getallservices/:id' element={ <ReadServiceInfor/>} />
+            {/* <Route path='/edit/:id' element={ <Edit/>} /> */}
+            <Route path='/read/:id' element={ <ReadServiceInfor />} />
 
           </Routes>
         </>

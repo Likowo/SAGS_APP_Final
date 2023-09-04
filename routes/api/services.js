@@ -19,10 +19,10 @@ router.get('/getallservices',servicesCtrl.getAll)
 // Edit ---> Update /api/services
 router.put('/editservice',servicesCtrl.edit)
 
-// DeleteAll services ---> Read /api/services
+// DeleteAll services ---> DeleteAll /api/services
 router.delete('/deleteall', servicesCtrl.deleteAll)
 
-// DeleteOne service ---> Read /api/services
+// DeleteOne service ---> Deleteone /api/services
 router.delete('/deleteone', servicesCtrl.deleteOne)
 
 
