@@ -16,7 +16,7 @@ function AllServices() {
     console.log(response.data);
   };
 
-  console.log("checking return", allServices);
+  console.log("checking return",allServices);
   useEffect(() => {
     getAllServices();
   }, []);
@@ -24,13 +24,12 @@ function AllServices() {
   const handleDelete = (_id) =>{
     const confirm = window.confirm("Are you sure you want to Delete?");
     if(confirm){
-      axios.delete('http://localhost:3001/api/services/getallservices/'+_id) 
+      axios.delete('http://localhost:3001/api/services/deleteone/'+_id) 
       .then(res => {
-        setRemoveData(res.data)
-      //  location.reload();
-      navigate('/home')
+        setRemoveData(res.data)    
       }).catch(err => console.log(err));
     }
+    navigate('/home') //TODO: page not refreshing to home after delete action
   }
 
   return (
@@ -46,7 +45,7 @@ function AllServices() {
         <table className="table table-striped">
           <thead>
             <tr>
-              {/* <th>ID</th> */}
+              <th>ID</th>
               <th>SERVICE NAME</th>
               <th>SERVICE TYPE</th>
               <th>BEING OFFERED?</th>
@@ -58,13 +57,13 @@ function AllServices() {
               ? allServices.map((service, index) => {
                 return  (
                   <tr key={index}>                 
-                    {/* <td>{service.id}</td> */}
+                    <td>{service.id}</td>
                     <td>{service.serviceName}</td>
                     <td>{service.serviceType}</td>
                     <td>{service.beingOffered}</td>
                     <td>
                     <button>
-            {" "}
+            {""}
             <Link to={`/edit/${service._id}`}>EDIT</Link>
           </button>
                      <button><Link to={`/read/${service._id}`}  className="btn btn-sm btn-primary me-2">READ</Link></button> 
@@ -72,7 +71,7 @@ function AllServices() {
                     </td>
                   </tr>);
                 })
-              : ""}
+              :""}
           </tbody>
         </table>
       </div>
