@@ -20,6 +20,19 @@ async function create(req,res) {
     }
 }
 
+//Get by Id function
+const getById = async (req,res) => {
+    try{
+        id = req.params.id 
+        console.log("This is the id inside getById" + id)
+        console.log(id)
+        const getByIdService = await Services.findOne({"_id":id})
+        res.status(200).json(getByIdService)
+    } catch(err){
+        res.status(400).json({msg:err.message})
+    }
+}
+
 // Edit(Put/Update) services function
 async function edit(req,res) {
     try{
@@ -29,7 +42,7 @@ async function edit(req,res) {
         res.status(400).json({msg:err.message})
     }
 }
-// // Delete services function
+// // Delete All services function
 async function deleteAll(req,res) {
     try{
         await Services.deleteMany({})
@@ -53,5 +66,6 @@ module.exports = {
     getAll,
     edit,
     deleteAll,
-    deleteOne
+    deleteOne,
+    getById
 };

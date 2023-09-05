@@ -1,0 +1,57 @@
+import React from 'react';
+
+import { Link } from 'react-router-dom';
+
+function UpdateService() {
+ 
+    const [updateData, setUpdateData] = useState([]);
+    const {id} = useParams();
+
+    const navigate = useNavigate();
+  
+    // The object passed to setCreateData is merged with the current createData object
+    const handleChange = (e) => {
+      setCreateData({
+        ...createData,
+        [e.target.name]: e.target.value,
+      });
+    };
+  // console.log(handleChange('handle change working'))
+  
+   // on submit alert current state
+   const handleSubmit = async (e) =>  {
+    e.preventDefault() // Prevent form from being submitted to the server
+    try {
+      // We don't want to send the 'error' or 'confirm' property,
+      // so let's make a copy of the state object, then delete them
+      const newCreateData = {...createData};
+      delete newCreateData.error;
+      delete newCreateData.confirm;
+      // or
+      // const {name, email, password} = formData
+  
+      const user = await servicesService.create(newCreateData)
+      setAllServices(newCreateData)
+     
+    } catch(err) {
+      // An error occurred
+      setCreateData({...createData, error: 'New Entry Failed - Try Again'})
+    }
+    navigate('/home')
+  }
+  
+    return (
+      <div>
+          <h1>Form to create a new service</h1>
+           {/* NOTE: action will be the route, method will be the HTTP Method. NB: HTTP verb is Create, while HTTP method is POST */}
+           <form onSubmit={handleSubmit}>
+              Service Name: <input type="text" name='serviceName' onChange={handleChange} /> <br />
+              Service Type: <input type="text" name='serviceType' onChange={handleChange} /> <br />    
+              <input type="submit" name='' value="Create New Service" />
+              <Link to="/home" >⬅️Back</Link>
+          </form>       
+      </div>
+    )
+}
+
+export default UpdateService

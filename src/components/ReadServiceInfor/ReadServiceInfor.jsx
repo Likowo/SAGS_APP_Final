@@ -2,22 +2,22 @@ import React, { useEffect, useState } from "react";
 import axios from "axios"; // React Library Used to send and receive data from Backend
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
+// import Services from "../../../models/Services";
 
-function ReadServiceInfor(service) {
+function ReadServiceInfor(Services) {
     const [allServices, setAllServices] = useState("");
-    const id = useParams();
+    const id = useParams().id;
 
-  const getAllServices = async () => {
-    const response = await axios.get(
-      "http://localhost:3001/api/services/getallservices" + id
-    );
-    setAllServices(response.data);
-    console.log("reading information",response.data);
-  };
+    console.log(" Want to call getbyid")
 
-  // console.log("checking return", allServices);
   useEffect(() => {
-   const read = getById;
+    console.log("Calling getbyid")
+     axios.get(
+      `http://localhost:3001/api/services/getservice/${id}`
+    ).then(
+      res => {setAllServices(res.data);}
+    );
+    console.log("Finished Calling getbyid")
   }, []);
 
   return (
@@ -26,15 +26,16 @@ function ReadServiceInfor(service) {
             <h3>Service Information</h3>
             <div>
             <div>
-              <strong>Service Name: {service.serviceName}</strong>
+              <strong>Service Name: {allServices.serviceName}</strong>
           </div>
           <div>
-              <strong>Service Type: {service.serviceType}</strong>
+              <strong>Service Type: {allServices.serviceType}</strong>
           </div>
           <div>
-              <strong>Being Offered?: {service.beingOffered}</strong>
+              <strong>Being Offered?: {allServices.beingOffered}</strong>
           </div>
-          <Link to={`/edit/${id}`} >EDIT</Link>
+          <button> <Link to={`/edit/${id}`} >EDIT</Link></button>
+         <br />
           <Link to="/home" >⬅️Back</Link>
 
 {/*               
@@ -60,3 +61,18 @@ export default ReadServiceInfor;
 //           console.log('do i ever go');
 //       })
 //   })
+
+// const getById = async () => {
+//   const response = await axios.get(
+//     // console.log("Calling getbyid")
+//     `http://localhost:3001/api/services/getservice/${id}`
+//   );
+//   console.log("Finished Calling getbyid")
+//   setAllServices(response.data);
+//  // console.log('this is the response data')
+//  // console.log(response)
+//   console.log("reading information",response.data);
+// };
+// console.log('this is the service name')
+// console.log(setAllServices)
+// // console.log("checking return", allServices);

@@ -15,6 +15,9 @@ router.get('/getallservices',servicesCtrl.getAll)
 //  res.json('This is working')
 // })
 
+//GET by Id ---> Read /api/services/getservice
+router.get('/getservice/:id',servicesCtrl.getById)
+
 
 // Edit ---> Update /api/services
 router.put('/editservice',servicesCtrl.edit)
