@@ -1,4 +1,8 @@
-Introduction: 
+Introduction: End point of SAGS project is to create a multi-service app that provides services and trainings to the general public in different sectors.
+- Wireframe down with draw.io
+Link: https://app.diagrams.net/
+![Alt text](image.png)
+
 
 
 
@@ -18,11 +22,9 @@ Technologies used:
 - Schama via MongoDB
 
 Getting Started: 
-- Project planning done on Trello board
-Link: https://app.diagrams.net/
-![Alt text](image.png)
+- Project planning done on Trello board:
 
-- Deployed on vercel
+- Deployed on vercel:
 Link:
 
 
