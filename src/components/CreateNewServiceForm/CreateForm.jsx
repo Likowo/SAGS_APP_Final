@@ -26,8 +26,8 @@ function CreateForm({setAllServices}) {
     // We don't want to send the 'error' or 'confirm' property,
     // so let's make a copy of the state object, then delete them
     const newCreateData = {...createData};
-    delete newCreateData.error;
-    delete newCreateData.confirm;
+    // delete newCreateData.error;
+    // delete newCreateData.confirm;
     // or
     // const {name, email, password} = formData
 

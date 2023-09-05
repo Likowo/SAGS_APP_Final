@@ -11,7 +11,7 @@ function UpdateService() {
     _id:"",
     serviceName:"",
     serviceType:"",
-    beingOffered:true
+    beingOffered:""
   });
   const id = useParams().id;
   const navigate = useNavigate();
@@ -61,7 +61,10 @@ useEffect(() => {
            {/* NOTE: action will be the route, method will be the HTTP Method. NB: HTTP verb is Create, while HTTP method is POST */}
            <form onSubmit={handleSubmit} action={`/update/submit/${id.id}?_method=PUT`} method='POST' >
               Service Name: <input type="text" name='serviceName' value={allServices.serviceName}  onChange={handleChange} /> <br />
-              Service Type: <input type="text" name='serviceType' onChange={handleChange} value={allServices.serviceType} /> <br />    
+              Service Type: <input type="text" name='serviceType' value={allServices.serviceType} onChange={handleChange} /> <br />    
+           //TODO: Being offered?:{allServices.beingOffered?( <input type="checkbox" name='beingOffered' defaultValue={'True'} onChange={handleChange} />):(<input type="checkbox" name='beingOffered' value={'False'} onChange={handleChange} />)
+              }
+                <br />    
               <input type="submit" name='' value="Edit Service" />
               <button> <Link to="/home" >⬅️Back</Link></button>
           </form>       
