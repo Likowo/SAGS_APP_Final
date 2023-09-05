@@ -5,35 +5,37 @@ import { useNavigate } from "react-router-dom";
 
 function AllServices() {
   const [allServices, setAllServices] = useState("");
-  const [removeData, setRemoveData] = useState("")
+  const [removeData, setRemoveData] = useState("");
   const navigate = useNavigate();
 
   const getAllServices = async () => {
     const response = await axios.get(
-      "http://localhost:3001/api/services/getallservices"
+      "/api/services/getallservices"
     );
     setAllServices(response.data);
     console.log(response.data);
   };
 
-  console.log("checking return",allServices);
+  console.log("checking return", allServices);
   useEffect(() => {
     getAllServices();
   }, []);
 
-  const handleDelete = (_id) =>{
+  const handleDelete = (_id) => {
     const confirm = window.confirm("Are you sure you want to Delete?");
-    if(confirm){
-      axios.delete('http://localhost:3001/api/services/deleteone/'+_id) 
-      .then(res => {
-        setRemoveData(res.data)    
-      }).catch(err => console.log(err));
+    if (confirm) {
+      axios
+        .delete("/api/services/deleteone/" + _id)
+        .then((res) => {
+          setRemoveData(res.data);
+        })
+        .catch((err) => console.log(err));
     }
-    navigate('/home') //TODO: page not refreshing to home after delete action
-  }
+    navigate("/home"); //TODO: page not refreshing to home after delete action
+  };
 
   return (
-    <div className="tableMainContainer" >
+    <div className="tableMainContainer">
       <h1>All Services</h1>
 
       <div className="w-75 rounded bg-red border shadow p-4">
@@ -45,7 +47,7 @@ function AllServices() {
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>ID</th>
+              {/* <th>ID</th> */}
               <th>SERVICE NAME</th>
               <th>SERVICE TYPE</th>
               <th>BEING OFFERED?</th>
@@ -55,23 +57,36 @@ function AllServices() {
           <tbody>
             {allServices
               ? allServices.map((service, index) => {
-                return  (
-                  <tr key={index}>                 
-                    <td>{service.id}</td>
-                    <td>{service.serviceName}</td>
-                    <td>{service.serviceType}</td>
-                    <td>{service.beingOffered}</td>
-                    <td>
-                    <button>
-            {""}
-            <Link to={`/edit/${service._id}`}>EDIT</Link>
-          </button>
-                     <button><Link to={`/read/${service._id}`}  className="btn btn-sm btn-primary me-2">READ</Link></button> 
-                      <button onClick={e => handleDelete(service._id)} className="btn btn-sm btn-danger">DELETE</button>
-                    </td>
-                  </tr>);
+                  return (
+                    <tr key={index}>
+                      {/* <td>{service.id}</td> */}
+                      <td>{service.serviceName}</td>
+                      <td>{service.serviceType}</td>
+                      <td>{service.beingOffered}</td>
+                      <td>
+                        <button>
+                          {""}
+                          <Link to={`/edit/${service._id}`}>EDIT</Link>
+                        </button>
+                        <button>
+                          <Link
+                            to={`/read/${service._id}`}
+                            className="btn btn-sm btn-primary me-2"
+                          >
+                            READ
+                          </Link>
+                        </button>
+                        <button
+                          onClick={(e) => handleDelete(service._id)}
+                          className="btn btn-sm btn-danger"
+                        >
+                          DELETE
+                        </button>
+                      </td>
+                    </tr>
+                  );
                 })
-              :""}
+              : ""}
           </tbody>
         </table>
       </div>

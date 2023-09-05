@@ -26,6 +26,7 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
+            <Route path='/' element={<ServicesPage />} />
             <Route path='/home' element={<ServicesPage />} />
             <Route path='/authpage' element={ <AuthPage setUser={setUser} />} />
             <Route path='/add' element={ <Create />} />
