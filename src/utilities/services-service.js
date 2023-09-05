@@ -20,14 +20,14 @@ export async function read(getById) {
   return data;
 }
 
-// export async function edit(getById) {
-//   // Delegate the network request code to the users-api.js API module
-//   // which will ultimately return a JSON Web Token (JWT)
-//  const data = await servicesAPI.edit(getById);
+export async function edit(editById) {
+  // Delegate the network request code to the users-api.js API module
+  // which will ultimately return a JSON Web Token (JWT)
+ const data = await servicesAPI.edit(editById);
 
-//   // Baby step by returning whatever is sent back by the server
-//   return data;
-// }
+  // Baby step by returning whatever is sent back by the server
+  return data;
+}
 
 
 
