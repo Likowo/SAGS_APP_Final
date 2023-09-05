@@ -37,7 +37,7 @@ function UpdateService() {
    
   } catch(err) {
     // An error occurred
-    setEditData({...editData, error: 'New Entry Failed - Try Again'})
+    setEditData({...editData, error: 'Edit Failed - Try Again'})
   }
   navigate('/home')
 }
@@ -58,8 +58,8 @@ useEffect(() => {
       <div>
           <h1>Form to edit a service</h1>
            {/* NOTE: action will be the route, method will be the HTTP Method. NB: HTTP verb is Create, while HTTP method is POST */}
-           <form onSubmit={handleSubmit}>
-              Service Name: <input type="text" name='serviceName' onChange={handleChange} /> <br />
+           <form onSubmit={handleSubmit} action={`/update/submit/${id.id}?_method=PUT`} method='POST' >
+              Service Name: <input type="text" name='serviceName' defaultValue={id.name}  onChange={handleChange} /> <br />
               Service Type: <input type="text" name='serviceType' onChange={handleChange} /> <br />    
               <input type="submit" name='' value="Edit Service" />
               <button> <Link to="/home" >⬅️Back</Link></button>

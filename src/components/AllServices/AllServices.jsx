@@ -48,9 +48,10 @@ function AllServices() {
                     <td>{service.serviceType}</td>
                     <td>{service.beingOffered}</td>
                     <td>
-                      <button className="btn btn-sm btn-primary me-2">
-                        EDIT
-                      </button>
+                    <button>
+            {" "}
+            <Link to={`/edit/${service._id}`}>EDIT</Link>
+          </button>
                      <button><Link to={`/read/${service._id}`}  className="btn btn-sm btn-primary me-2">READ</Link></button> 
                       <button className="btn btn-sm btn-danger">DELETE</button>
                     </td>
