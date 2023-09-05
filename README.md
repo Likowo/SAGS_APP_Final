@@ -3,7 +3,7 @@ Introduction: End point of SAGS project is to create a multi-service app that pr
 Link: https://app.diagrams.net/
 ![Alt text](image.png)
 
-Technologies used:
+** Technologies used:
 * Technologies
  -MongoDB -document database
  - Express(.js) -Node.js web framework
@@ -15,15 +15,20 @@ Technologies used:
 - axios - a react library used to send asynchronous HTTP requests to REST endpoints. Very useful to perform CRUD operations.
 -
 
-*API
+** API
 - Schama via MongoDB
 
-Getting Started: 
+** Getting Started: 
 - Project planning done on Trello board:
 -Link: https://trello.com/b/021wCbIm/mod-3-project-a-mern-stack-application
 
 - Deployed on vercel:
 Link:
+
+** Unsolved problems:
+
+** Future Enhancements:
+
 
 
 
