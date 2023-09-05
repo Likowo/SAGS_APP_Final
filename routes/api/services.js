@@ -29,7 +29,7 @@ router.put('/editservice/:id',servicesCtrl.editById)
 router.delete('/deleteall', servicesCtrl.deleteAll)
 
 // DeleteOne service ---> Deleteone /api/services
-router.delete('/deleteone', servicesCtrl.deleteOne)
+router.delete('/deleteone/:id', servicesCtrl.deleteOne)
 
 
 

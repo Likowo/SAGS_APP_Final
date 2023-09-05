@@ -43,7 +43,6 @@ async function edit(req,res) {
     }
 }
 
-
 //Edit by Id function
 const editById = async (req,res) => {
     try{
@@ -67,7 +66,7 @@ async function deleteAll(req,res) {
 // // Delete one services function
 async function deleteOne(req,res) {
     try{
-        const deletedService =  await Services.findByIdAndDelete(req.body.id)
+        const deletedService =  await Services.findByIdAndDelete(req.params.id)
         res.json(deletedService)
     } catch(err){
         res.status(400).json({msg:err.message})

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; // React Library Used to send and receive data from Backend
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function AllServices() {
   const [allServices, setAllServices] = useState("");
+  const [removeData, setRemoveData] = useState("")
+  const navigate = useNavigate();
 
   const getAllServices = async () => {
     const response = await axios.get(
@@ -17,6 +20,18 @@ function AllServices() {
   useEffect(() => {
     getAllServices();
   }, []);
+
+  const handleDelete = (_id) =>{
+    const confirm = window.confirm("Are you sure you want to Delete?");
+    if(confirm){
+      axios.delete('http://localhost:3001/api/services/getallservices/'+_id) 
+      .then(res => {
+        setRemoveData(res.data)
+      //  location.reload();
+      navigate('/home')
+      }).catch(err => console.log(err));
+    }
+  }
 
   return (
     <div className="tableMainContainer" >
@@ -53,7 +68,7 @@ function AllServices() {
             <Link to={`/edit/${service._id}`}>EDIT</Link>
           </button>
                      <button><Link to={`/read/${service._id}`}  className="btn btn-sm btn-primary me-2">READ</Link></button> 
-                      <button className="btn btn-sm btn-danger">DELETE</button>
+                      <button onClick={e => handleDelete(service._id)} className="btn btn-sm btn-danger">DELETE</button>
                     </td>
                   </tr>);
                 })

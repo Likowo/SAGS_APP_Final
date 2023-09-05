@@ -13,6 +13,6 @@ export function edit(id) {
     return sendRequest(`${BASE_URL}/editservice/${id._id}`, 'PUT',id);
   }
 
-// export function delete(id) {
-//     return sendRequest(`${BASE_URL}/delete`, 'DELETE',id);
-//   }
+export function deleete(id) {
+    return sendRequest(`${BASE_URL}/delete/${id._id}`, 'DELETE',id);
+  }
