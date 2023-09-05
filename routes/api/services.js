@@ -23,7 +23,7 @@ router.put('/editservice/:id',servicesCtrl.editById)
 
 
 // Edit all---> Update /api/services
-router.put('/editservice',servicesCtrl.edit)
+// router.put('/editservice',servicesCtrl.edit)
 
 // DeleteAll services ---> DeleteAll /api/services
 router.delete('/deleteall', servicesCtrl.deleteAll)

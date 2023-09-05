@@ -47,10 +47,8 @@ async function edit(req,res) {
 //Edit by Id function
 const editById = async (req,res) => {
     try{
-        id = req.params.id 
-        console.log("This is the id inside editById" + id)
-        console.log(id)
-        const editByIdService = await Services.findByIdAndUpdate(req.body.id,req.body.service)
+        // id = req.params.id 
+        const editByIdService = await Services.findByIdAndUpdate(req.params.id,req.body)
         res.status(200).json(editByIdService)
     } catch(err){
         res.status(400).json({msg:err.message})

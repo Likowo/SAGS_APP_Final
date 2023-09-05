@@ -10,7 +10,7 @@ export function read(id) {
   }
 
 export function edit(id) {
-    return sendRequest(`${BASE_URL}/edit`, 'PUT',id);
+    return sendRequest(`${BASE_URL}/editservice/${id._id}`, 'PUT',id);
   }
 
 // export function delete(id) {

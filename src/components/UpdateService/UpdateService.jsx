@@ -7,14 +7,18 @@ import * as servicesService from '../../utilities/services-service';
 
 function UpdateService() {
  
-  const [allServices, setAllServices] = useState("");
-  const [editData, setEditData] = useState("");
+  const [allServices, setAllServices] = useState({
+    _id:"",
+    serviceName:"",
+    serviceType:"",
+    beingOffered:true
+  });
   const id = useParams().id;
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setEditData({
-      ...editData,
+    setAllServices({
+      ...allServices,
       [e.target.name]: e.target.value,
     });
   };
@@ -26,18 +30,15 @@ function UpdateService() {
   try {
     // We don't want to send the 'error' or 'confirm' property,
     // so let's make a copy of the state object, then delete them
-    const newEditData = {...editData};
-    delete newEditData.error;
-    delete newEditData.confirm;
+    const newEditData = {...allServices};
     // or
     // const {name, email, password} = formData
 
-    const user = await servicesService.edit(newEditData)
-    setAllServices(newEditData)
-   
-  } catch(err) {
+    const res = await servicesService.edit(newEditData)
+   console.log(res)
+  } catch(err) { //TODO:
     // An error occurred
-    setEditData({...editData, error: 'Edit Failed - Try Again'})
+    setAllServices({...allServices, error: 'Edit Failed - Try Again'})
   }
   navigate('/home')
 }
@@ -46,8 +47,8 @@ function UpdateService() {
 
 useEffect(() => {
   console.log("Calling editbyid")
-   axios.put(
-    `http://localhost:3001/api/services/editservice/${id}`
+   axios.get(
+    `/api/services/getservice/${id}`
   ).then(
     res => {setAllServices(res.data);}
   );
@@ -59,8 +60,8 @@ useEffect(() => {
           <h1>Form to edit a service</h1>
            {/* NOTE: action will be the route, method will be the HTTP Method. NB: HTTP verb is Create, while HTTP method is POST */}
            <form onSubmit={handleSubmit} action={`/update/submit/${id.id}?_method=PUT`} method='POST' >
-              Service Name: <input type="text" name='serviceName' defaultValue={id.name}  onChange={handleChange} /> <br />
-              Service Type: <input type="text" name='serviceType' onChange={handleChange} /> <br />    
+              Service Name: <input type="text" name='serviceName' value={allServices.serviceName}  onChange={handleChange} /> <br />
+              Service Type: <input type="text" name='serviceType' onChange={handleChange} value={allServices.serviceType} /> <br />    
               <input type="submit" name='' value="Edit Service" />
               <button> <Link to="/home" >⬅️Back</Link></button>
           </form>       
