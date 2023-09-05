@@ -3,9 +3,6 @@ Introduction: End point of SAGS project is to create a multi-service app that pr
 Link: https://app.diagrams.net/
 ![Alt text](image.png)
 
-
-
-
 Technologies used:
 * Technologies
  -MongoDB -document database
@@ -23,6 +20,7 @@ Technologies used:
 
 Getting Started: 
 - Project planning done on Trello board:
+-Link: https://trello.com/b/021wCbIm/mod-3-project-a-mern-stack-application
 
 - Deployed on vercel:
 Link:
