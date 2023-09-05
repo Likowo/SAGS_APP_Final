@@ -23,7 +23,7 @@ Link: https://app.diagrams.net/
 -Link: https://trello.com/b/021wCbIm/mod-3-project-a-mern-stack-application
 
 - Deployed on vercel:
-Link:
+Link:https://sags-app-final-7fxi3m7ny-likowo.vercel.app/
 
 ** Unsolved problems:
 
