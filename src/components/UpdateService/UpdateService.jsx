@@ -4,41 +4,20 @@ import { Link } from 'react-router-dom';
 
 function UpdateService() {
  
-    const [updateData, setUpdateData] = useState([]);
-    const {id} = useParams();
+  const [allServices, setAllServices] = useState("");
+  const id = useParams().id;
 
-    const navigate = useNavigate();
-  
-    // The object passed to setCreateData is merged with the current createData object
-    const handleChange = (e) => {
-      setCreateData({
-        ...createData,
-        [e.target.name]: e.target.value,
-      });
-    };
-  // console.log(handleChange('handle change working'))
-  
-   // on submit alert current state
-   const handleSubmit = async (e) =>  {
-    e.preventDefault() // Prevent form from being submitted to the server
-    try {
-      // We don't want to send the 'error' or 'confirm' property,
-      // so let's make a copy of the state object, then delete them
-      const newCreateData = {...createData};
-      delete newCreateData.error;
-      delete newCreateData.confirm;
-      // or
-      // const {name, email, password} = formData
-  
-      const user = await servicesService.create(newCreateData)
-      setAllServices(newCreateData)
-     
-    } catch(err) {
-      // An error occurred
-      setCreateData({...createData, error: 'New Entry Failed - Try Again'})
-    }
-    navigate('/home')
-  }
+  console.log(" Want to call getbyid")
+
+useEffect(() => {
+  console.log("Calling getbyid")
+   axios.get(
+    `http://localhost:3001/api/services/getservice/${id}`
+  ).then(
+    res => {setAllServices(res.data);}
+  );
+  console.log("Finished Calling getbyid")
+}, []);
   
     return (
       <div>
@@ -48,7 +27,7 @@ function UpdateService() {
               Service Name: <input type="text" name='serviceName' onChange={handleChange} /> <br />
               Service Type: <input type="text" name='serviceType' onChange={handleChange} /> <br />    
               <input type="submit" name='' value="Create New Service" />
-              <Link to="/home" >⬅️Back</Link>
+              <button> <Link to="/home" >⬅️Back</Link></button>
           </form>       
       </div>
     )

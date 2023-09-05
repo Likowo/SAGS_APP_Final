@@ -19,7 +19,7 @@ function ReadServiceInfor(Services) {
     );
     console.log("Finished Calling getbyid")
   }, []);
-
+  console.log("Git test")
   return (
     <div>
           <div>
@@ -32,11 +32,13 @@ function ReadServiceInfor(Services) {
               <strong>Service Type: {allServices.serviceType}</strong>
           </div>
           <div>
-              <strong>Being Offered?: {allServices.beingOffered}</strong>
+              <strong>Being Offered?: {String(allServices.beingOffered)}</strong>
           </div>
           <button> <Link to={`/edit/${id}`} >EDIT</Link></button>
          <br />
-          <Link to="/home" >⬅️Back</Link>
+
+         <button> <Link to="/home" >⬅️Back</Link></button>
+         
 
 {/*               
             {allServices.map((service, index) => {
