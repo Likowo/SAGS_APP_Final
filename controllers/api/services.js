@@ -42,6 +42,21 @@ async function edit(req,res) {
         res.status(400).json({msg:err.message})
     }
 }
+
+
+//Edit by Id function
+const editById = async (req,res) => {
+    try{
+        id = req.params.id 
+        console.log("This is the id inside editById" + id)
+        console.log(id)
+        const editByIdService = await Services.findByIdAndUpdate(req.body.id,req.body.service)
+        res.status(200).json(editByIdService)
+    } catch(err){
+        res.status(400).json({msg:err.message})
+    }
+}
+
 // // Delete All services function
 async function deleteAll(req,res) {
     try{
@@ -67,5 +82,6 @@ module.exports = {
     edit,
     deleteAll,
     deleteOne,
-    getById
+    getById,
+    editById
 };

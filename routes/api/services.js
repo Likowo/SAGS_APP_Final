@@ -18,8 +18,11 @@ router.get('/getallservices',servicesCtrl.getAll)
 //GET by Id ---> Read /api/services/getservice
 router.get('/getservice/:id',servicesCtrl.getById)
 
+//Edit by Id ---> Read /api/services/editservice
+router.put('/editservice/:id',servicesCtrl.editById)
 
-// Edit ---> Update /api/services
+
+// Edit all---> Update /api/services
 router.put('/editservice',servicesCtrl.edit)
 
 // DeleteAll services ---> DeleteAll /api/services

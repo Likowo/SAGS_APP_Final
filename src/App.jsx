@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage/Home'
 import NavBar from './components/NavBar/NavBar';
 import Create from './components/CreateNewServiceForm/CreateForm';
 import ReadServiceInfor from './components/ReadServiceInfor/ReadServiceInfor';
+import UpdateService from './components/UpdateService/UpdateService';
 // css //TODO: 
 import './App.css';
 
@@ -28,7 +29,7 @@ function App() {
             <Route path='/home' element={<ServicesPage />} />
             <Route path='/authpage' element={ <AuthPage setUser={setUser} />} />
             <Route path='/add' element={ <Create />} />
-            {/* <Route path='/edit/:id' element={ <Edit/>} /> */}
+            <Route path='/edit/:id' element={ <UpdateService />} />
             <Route path='/read/:id' element={ <ReadServiceInfor />} />
 
           </Routes>

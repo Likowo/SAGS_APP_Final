@@ -31,7 +31,7 @@ function AllServices() {
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>ID</th>
+              {/* <th>ID</th> */}
               <th>SERVICE NAME</th>
               <th>SERVICE TYPE</th>
               <th>BEING OFFERED?</th>
@@ -43,7 +43,7 @@ function AllServices() {
               ? allServices.map((service, index) => {
                 return  (
                   <tr key={index}>                 
-                    <td>{service.id}</td>
+                    {/* <td>{service.id}</td> */}
                     <td>{service.serviceName}</td>
                     <td>{service.serviceType}</td>
                     <td>{service.beingOffered}</td>
@@ -51,7 +51,7 @@ function AllServices() {
                       <button className="btn btn-sm btn-primary me-2">
                         EDIT
                       </button>
-                     <button><Link to={`/read/${service._id}`}  className="btn btn-sm btn-primary me-2">GET/READ</Link></button> 
+                     <button><Link to={`/read/${service._id}`}  className="btn btn-sm btn-primary me-2">READ</Link></button> 
                       <button className="btn btn-sm btn-danger">DELETE</button>
                     </td>
                   </tr>);
