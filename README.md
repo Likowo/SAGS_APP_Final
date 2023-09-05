@@ -18,6 +18,15 @@ Technologies used:
 - Schama via MongoDB
 
 Getting Started: 
+- Project planning done on Trello board
+Link: https://app.diagrams.net/
+![Alt text](image.png)
+
+- Deployed on vercel
+Link:
+
+
+
 
 
 
