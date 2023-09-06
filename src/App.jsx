@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from './utilities/users-service';
+import { Link } from 'react-router-dom';
 // pages
 import AuthPage from './pages/AuthPage/AuthPage';
 import ServicesPage from './pages/AllServicesPage/ServicesPage';
 import NewOrderPage from './pages/NewOrderPage/NewOrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage';
+import LandingPage from './pages/LandingPage/LandingPage';
 // components
 import HomePage from './pages/HomePage/Home'
 import NavBar from './components/NavBar/NavBar';
@@ -26,19 +28,21 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path='/' element={<ServicesPage />} />
+            <Route path='/' element={<LandingPage />} />
             <Route path='/home' element={<ServicesPage />} />
-            <Route path='/authpage' element={ <AuthPage setUser={setUser} />} />
+            <Route path='/authpage' element={ <AuthPage />} />
             <Route path='/add' element={ <Create />} />
             <Route path='/edit/:id' element={ <UpdateService />} />
             <Route path='/read/:id' element={ <ReadServiceInfor />} />
+            <Route path='/delete/:id' element={ <ReadServiceInfor />} />
 
           </Routes>
         </>
       ) : (
         <>
          <NavBar user={user} setUser={setUser} />          
-         <AuthPage setUser={setUser} />       
+         {/* <button className='signOrLogIn-Template'><AuthPage setUser={setUser} /> </button> */}
+         <LandingPage />      
         </>      
       )}     
     </main>

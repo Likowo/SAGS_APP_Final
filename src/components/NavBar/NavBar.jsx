@@ -18,6 +18,8 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
+      <Link to='/'></Link>
+      &nbsp; | &nbsp;
       <Link to='/home'>HOME</Link>
       &nbsp; | &nbsp;
       <Link to='/authpage' onClick={handleAuthPage}>LOG IN OR SIGN UP</Link>

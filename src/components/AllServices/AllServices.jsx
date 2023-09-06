@@ -27,7 +27,8 @@ function AllServices() {
       axios
         .delete("/api/services/deleteone/" + _id)
         .then((res) => {
-          setRemoveData(res.data);
+          setRemoveData(res.data)
+          return getAllServices;
         })
         .catch((err) => console.log(err));
     }
@@ -41,7 +42,7 @@ function AllServices() {
       <div className="w-75 rounded bg-red border shadow p-4">
         <div className="d-flex jsutify-content-end">
           <Link to="/add" className="btn btn-success">
-            Create a New Service
+           <button> Create a New Service</button>
           </Link>
         </div>
         <table className="table table-striped">
