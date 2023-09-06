@@ -2,7 +2,6 @@ import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
 import {Fade, Zoom, Slide, } from 'react-slideshow-image';
 
-// const [serviceImage, setServiceImage] = useState('')
 const serviceImages = [
   {
  serviceType: "FoodHandle and Alcohol Server Training Course",
@@ -24,36 +23,48 @@ const serviceImages = [
  ];
 
  const divStyle = {
-  height: "400px",
+  height: "450px",
   border:"solid black 2px",
-  width: "400px",
-  backgroundsize: "cover",
+  width: "700px",
+  ["background-size"]: "cover",
+  background: "no-repeat",
   display: "flex",
   alignitems: "center",
   justifycontent: "center"
  }
 
  const spanStyle = {
+  border:"solid black 2px",
+  height:"100px",
+  width:"100px",
   fontSize: "20px",
+  padding: "20px",
   background:"#efefef",
-  color: "#000000"
+  color: "#000000",
+  aligntext: "center",
+ }
+
+ const slideContainer = {
+  height: "450px",
+  border:"solid red 8px",
+  width: "700px",
  }
 
   
 const ImageSlider = () => {
   
   return (
-    <div className='slide-container' >
-      <Slide>
+    <div className='slideContainer' >
+      <>
         {serviceImages.map((pic, index)=> {
             return (
                 <div key={index} >
-                <div style={{ ...divStyle, 'backgroundImage': `url(${pic.image})`}}>
+                <div style={{ ...divStyle, 'backgroundImage': `url(${pic.image})` }}>
                   <span style={spanStyle}>{pic.serviceType}</span>
                 </div>
             </div>)
         })}
-      </Slide>
+      </>
     </div>
   )
 }

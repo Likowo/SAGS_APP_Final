@@ -19,7 +19,7 @@ function AllServices() {
   console.log("checking return", allServices);
   useEffect(() => {
     getAllServices();
-  }, []);
+  }, [removeData]);
 
   const handleDelete = (_id) => {
     const confirm = window.confirm("Are you sure you want to Delete?");
@@ -32,7 +32,6 @@ function AllServices() {
         })
         .catch((err) => console.log(err));
     }
-    navigate("/home"); //TODO: page not refreshing to home after delete action
   };
 
   return (

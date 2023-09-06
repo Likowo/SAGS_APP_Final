@@ -28,20 +28,20 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path='/' element={<LandingPage />} />
             <Route path='/home' element={<ServicesPage />} />
             <Route path='/authpage' element={ <AuthPage />} />
             <Route path='/add' element={ <Create />} />
             <Route path='/edit/:id' element={ <UpdateService />} />
             <Route path='/read/:id' element={ <ReadServiceInfor />} />
             <Route path='/delete/:id' element={ <ReadServiceInfor />} />
+            <Route path='/' element={<LandingPage />} />
 
           </Routes>
         </>
       ) : (
         <>
          <NavBar user={user} setUser={setUser} />          
-         {/* <button className='signOrLogIn-Template'><AuthPage setUser={setUser} /> </button> */}
+        <span><AuthPage setUser={setUser} /></span> 
          <LandingPage />      
         </>      
       )}     
