@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageSlider from '../../ImageSlider';
+import './LandingPage.module.css'
 
 function LandingPage() {
   return (

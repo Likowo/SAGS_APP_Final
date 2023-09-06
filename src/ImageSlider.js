@@ -1,15 +1,16 @@
 import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
 import {Fade, Zoom, Slide, } from 'react-slideshow-image';
+// import './ImageSlider.module.css'
 
 const serviceImages = [
   {
- serviceType: "FoodHandle and Alcohol Server Training Course",
+ serviceType: "FoodHandler and Alcohol Server Training Courses",
  image:(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhMoxhEGTE_e9_lp2ngSiA7oXmIdEJQFPCuw&usqp=CAU`),
 //  image:(`https://www.cherylslastcall.com/images/alcohol-server-permit-waitress.gif`),
  }, 
  {
-  serviceType: `Food Manager Procto Services`,
+  serviceType: `Food Manager Proctor Services`,
   image:(`https://cdn.statefoodsafety.com/blog/2019/08/proctor_supervise_examinee-compressor.jpg`),
   }, 
   {
