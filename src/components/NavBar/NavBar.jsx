@@ -17,7 +17,8 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
+    <nav className='navBar'>
+      <img src="" className='logoImg' alt="logo" />
       <Link to='/'></Link>
       &nbsp; | &nbsp;
       <Link to='/home'>HOME</Link>
