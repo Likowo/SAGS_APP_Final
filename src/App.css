@@ -90,6 +90,19 @@
   color: #00B4D8; 
 }
 
+.backBtnLink {
+  text-decoration: none;
+  text-decoration-line: none;
+  background-color:#023E8A ;
+  color: #00B4D8; 
+}
+
+.backBtn {
+  border: solid #00B4D8 5px;
+  background-color:#023E8A ;
+  border-radius: 25%;
+}
+
 .tableMainContainer {
   border: solid #023E8A 3px;
   display: flex;
@@ -110,6 +123,19 @@ th, td {
   border: solid #023E8A 0.5px;
   color:#90E0EF;
 }
+
+.serviceInforheader {
+ font-size: 25px;
+}
+
+.serviceInfor {
+  height: 8dvh;
+  width: auto;
+  border: solid #023E8A 0.5px;
+  color:#4c666b;
+  background-color: #2499d8;
+}
+
 
 
 :root {
@@ -194,7 +220,7 @@ code {
   justify-content: space-around;
   align-items: center;
   background-color: var(--tan-1);
-  color: var(--text-dark);
+  color: #03045E;
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
   padding: .6vmin;
@@ -232,16 +258,16 @@ label {
 
 input {
   padding: 1vmin;
-  font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  font-size: 3vmin;
+  border: .1vmin solid #03045E;
   border-radius: .5vmin;
-  color: var(--text-dark);
+  color:#03045E;
   background-image: none !important; /* prevent lastpass */
   outline: none;
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: #023E8A;
 }
 
 button, a.button {

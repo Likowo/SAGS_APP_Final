@@ -43,13 +43,13 @@ function CreateForm({setAllServices}) {
 
   return (
     <div>
-        <h1>Form to create a new service</h1>
+        <h1>Add  New Service</h1>
          {/* NOTE: action will be the route, method will be the HTTP Method. NB: HTTP verb is Create, while HTTP method is POST */}
          <form onSubmit={handleSubmit}>
             Service Name: <input type="text" name='serviceName' onChange={handleChange} /> <br />
             Service Type: <input type="text" name='serviceType' onChange={handleChange} /> <br />    
-            <input type="submit" name='' value="Create New Service" />
-            <Link to="/home" >⬅️Back</Link>
+            <input type="submit" name='' value=" ADD SERVICE " />
+            <Link to="/home" className='backBtnLink'  >⬅️Back</Link>
         </form>       
     </div>
   )

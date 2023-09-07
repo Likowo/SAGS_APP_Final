@@ -66,7 +66,7 @@ useEffect(() => {
               }
                 <br />    
               <input type="submit" name='' value="Edit Service" />
-              <button> <Link to="/home" >⬅️Back</Link></button>
+              <button className="backBtn"> <Link to="/home" className='backBtnLink' >⬅️Back</Link></button>
           </form>       
       </div>
     )

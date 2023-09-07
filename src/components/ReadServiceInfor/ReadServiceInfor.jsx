@@ -13,7 +13,7 @@ function ReadServiceInfor(Services) {
   useEffect(() => {
     console.log("Calling getbyid");
     axios
-      .get(`http://localhost:3001/api/services/getservice/${id}`)
+      .get(`/api/services/getservice/${id}`)
       .then((res) => {
         setAllServices(res.data);
       });
@@ -23,26 +23,26 @@ function ReadServiceInfor(Services) {
   return (
     <div>
       <div>
-        <h3>Service Information</h3>
+        <h3 className="serviceInforheader">╚»★«╝ 𝕊𝕖𝕣𝕧𝕚𝕔𝕖 𝕀𝕟𝕗𝕠𝕣𝕞𝕒𝕥𝕚𝕠𝕟 ╚»★«╝</h3>
         <div>
-          <div>
+          <div className="serviceInfor">
             <strong>Service Name: {allServices.serviceName}</strong>
           </div>
-          <div>
+          <div className="serviceInfor" >
             <strong>Service Type: {allServices.serviceType}</strong>
           </div>
-          <div>
+          <div className="serviceInfor" >
             <strong>Being Offered?: {String(allServices.beingOffered)}</strong>
           </div>
-          <button>
+          <button className="editBtn">
             {" "}
-            <Link to={`/edit/${id}`}>EDIT</Link>
+            <Link to={`/edit/${id}`} className="editBtnLink" >EDIT</Link>
           </button>
           <br />
 
-          <button>
+          <button className="backBtn">
             {" "}
-            <Link to="/home">⬅️Back</Link>
+            <Link to="/home" className='backBtnLink' >⬅️Back</Link>
           </button>
         </div>
       </div>
