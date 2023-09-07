@@ -219,9 +219,9 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--tan-1);
+  background-color: #03045E;
   color: #03045E;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid #03045E;
   border-radius: 1vmin;
   padding: .6vmin;
   text-align: center;
@@ -239,7 +239,7 @@ code {
 }
 
 p.error-message {
-  color: var(--orange);
+  color: red;
   text-align: center;
 }
 
@@ -247,7 +247,8 @@ form {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
+  color: #023E8A;
+  font-weight: bolder;
 }
 
 label {

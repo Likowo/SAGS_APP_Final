@@ -57,15 +57,15 @@ useEffect(() => {
   
     return (
       <div>
-          <h1>Form to edit a service</h1>
+          <h1>╚»★«╝ 𝔼𝕕𝕚𝕥 𝕊𝕖𝕣𝕧𝕚𝕔𝕖 ╚»★«╝</h1>
            {/* NOTE: action will be the route, method will be the HTTP Method. NB: HTTP verb is Create, while HTTP method is POST */}
            <form onSubmit={handleSubmit} action={`/update/submit/${id.id}?_method=PUT`} method='POST' >
               Service Name: <input type="text" name='serviceName' value={allServices.serviceName}  onChange={handleChange} /> <br />
               Service Type: <input type="text" name='serviceType' value={allServices.serviceType} onChange={handleChange} /> <br />    
-           //TODO: Being offered?:{allServices.beingOffered?( <input type="checkbox" name='beingOffered' defaultValue={'True'} onChange={handleChange} />):(<input type="checkbox" name='beingOffered' value={'False'} onChange={handleChange} />)
-              }
+           {/* //TODO: Being offered?:{allServices.beingOffered?( <input type="checkbox" name='beingOffered' defaultValue={'True'} onChange={handleChange} />):(<input type="checkbox" name='beingOffered' value={'False'} onChange={handleChange} />)
+              } */}
                 <br />    
-              <input type="submit" name='' value="Edit Service" />
+              <input type="submit" name='' value="EDIT" />
               <button className="backBtn"> <Link to="/home" className='backBtnLink' >⬅️Back</Link></button>
           </form>       
       </div>
