@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from './utilities/users-service';
+import ImageSlider from './components/SlideShow/ImageSlider';
 import { Link } from 'react-router-dom';
 // pages
 import AuthPage from './pages/AuthPage/AuthPage';
@@ -42,7 +43,9 @@ function App() {
         <>
          <NavBar user={user} setUser={setUser} />          
          <AuthPage setUser={setUser} />
-         <LandingPage />      
+         <LandingPage />
+         <ImageSlider />
+               
         </>      
       )}     
     </main>

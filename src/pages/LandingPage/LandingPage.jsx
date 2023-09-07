@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ImageSlider from '../../ImageSlider';
+import ImageSlider from '../../components/SlideShow/ImageSlider';
 import './LandingPage.module.css';
 import {Howl} from "howler";
 
@@ -15,7 +15,7 @@ const audioTracks = [
         label: "Calm Soul"
     }
 ]
-class LandingPage extends Component {
+class LandingPage extends Component{
    trackPlay = (src) => {
         const track = new Howl ({ src, html5: true }) // setting html5 to true;Responsible for preventing CORS error that prevents us from playing the sounds from external source
        track.play();
@@ -33,8 +33,8 @@ class LandingPage extends Component {
    render(){
         return (
             <div>       
-                LandingPage
-                <h2>Sounds</h2>
+                <p>Click the buttons below for some great sounds while you check out our services.Enjoy! </p>
+                
                 { audioTracks.map((music, index) => {  
             return(
                 <button key={index} onClick={() => this.trackPlay(music.track)}>
@@ -42,8 +42,10 @@ class LandingPage extends Component {
                 </button>
             )
         })}
-                <div><ImageSlider /></div>           
+        {/* <ImageSlider /> */}
+                          
             </div>
+            
           );
     } 
 }

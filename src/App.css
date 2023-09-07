@@ -24,16 +24,17 @@
   height: 8dvh;
   display: flex;
   padding:1px;
-  margin-left: -45%;
+  margin-left: -5%;
 }
 
 #CompName {
-  border: solid #03045E 1px;
+  border: solid #03045E 01px;
   height: 4dvh;
   display: flex;
+  justify-content: center;
   font-size: 8px;
   font-family: cursive;
-  margin-left: -58%;
+  margin-left: -38%;
 }
 
 .welcomeHeader {

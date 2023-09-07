@@ -1,5 +1,6 @@
 import React from 'react'
 import AllServices from '../../components/AllServices/AllServices';
+import ImageSlider from '../../components/SlideShow/ImageSlider';
 // import Services from '../../components/Services/AllServices'
 
 function ServicesPage() {
@@ -7,6 +8,7 @@ function ServicesPage() {
     <>
       <h1 className='welcomeHeader'>W̳̿͟͞e̳̿͟͞l̳̿͟͞c̳̿͟͞o̳̿͟͞m̳̿͟͞e̳̿͟͞ ̳̿͟͞t̳̿͟͞o̳̿͟͞ ̳̿͟͞S̳̿͟͞A̳̿͟͞G̳̿͟͞S̳̿͟͞</h1>
       <AllServices /> 
+      {/* <ImageSlider /> */}
     </>
   )
 }

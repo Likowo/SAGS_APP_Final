@@ -1,36 +1,50 @@
-Introduction: End point of SAGS project is to create a multi-service app that provides services and trainings to the general public in different sectors.
+# Introduction:
+
+ End point of SAGS project is to create a multi-service app that provides services and trainings to the general public in different sectors.
+
 - Wireframe down with draw.io
 Link: https://app.diagrams.net/
 ![Alt text](image.png)
 
-** Technologies used:
-* Technologies
- -MongoDB -document database
- - Express(.js) -Node.js web framework
- - Read(.js) - a client-side JavaScript framework
- - Node(.js) - the premier JavaScript web server
+# Technologies used:
 
-* Libraries
+*Technologies*
+
+-MongoDB -document database
+- Express(.js) -Node.js web framework
+- Read(.js) - a client-side JavaScript framework
+- Node(.js) - the premier JavaScript web server
+- React-slideshow-image
+- howler
+
+*Libraries*
 - React - a javascript library for building web apps. It is one of the most popular front=end frameworks
 - axios - a react library used to send asynchronous HTTP requests to REST endpoints. Very useful to perform CRUD operations.
--
+- MERN-Stack Infrastructure
 
-** API
-- Schama via MongoDB
+*API*
+- Created Schama via MongoDB
 
-** Getting Started: 
+# Getting Started: 
+
 - Project planning done on Trello board:
--Link: https://trello.com/b/021wCbIm/mod-3-project-a-mern-stack-application
+*Link: https://trello.com/b/021wCbIm/mod-3-project-a-mern-stack-application*
 
 - Deployed on vercel:
-Link:https://sags-app-final-7fxi3m7ny-likowo.vercel.app/
+*Link:https://sags-app-final-7fxi3m7ny-likowo.vercel.app/*
 
-** Unsolved problems:
+# Unsolved problems:
 
-** Future Enhancements:
+- CORS stopping audio from playing
+- Slide show stopped after resizing with error;  ***ResizeObserver loop completed with undelivered notifications***
+- Could not trace how a red border was applied to my welcome <span>
 
+# Future Enhancements:
 
-
+- Getting audio to play. This will improve UI experience
+- Redo slide size so slide show can render. This will improve UI experience
+- Work on having boolean option show up for added services
+- Complete building pages for all current services being offered and make web app available to the public
 
 
 
