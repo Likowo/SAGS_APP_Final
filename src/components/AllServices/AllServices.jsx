@@ -64,21 +64,21 @@ function AllServices() {
                       <td>{service.serviceType}</td>
                       <td>{service.beingOffered}</td>
                       <td>
-                        <button>
+                        <button className="editBtn" >
                           {""}
-                          <Link to={`/edit/${service._id}`}>EDIT</Link>
+                          <Link to={`/edit/${service._id}`} className="editBtnLink" >EDIT</Link>
                         </button>
-                        <button>
+                        <button className="readBtn" >
                           <Link
                             to={`/read/${service._id}`}
-                            className="btn btn-sm btn-primary me-2"
+                            className="readBtnLink"
                           >
                             READ
                           </Link>
                         </button>
                         <button
                           onClick={(e) => handleDelete(service._id)}
-                          className="btn btn-sm btn-danger"
+                          className="deleteBtn"
                         >
                           DELETE
                         </button>
