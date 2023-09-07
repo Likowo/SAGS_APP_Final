@@ -1,8 +1,8 @@
 # Introduction:
 
- End point of SAGS project is to create a multi-service app that provides services and trainings to the general public in different sectors.
+> End point of SAGS project is to create a multi-service app that provides services and trainings to the general public in different sectors.
 
-- Wireframe down with draw.io
+- Wireframe done with draw.io
 Link: https://app.diagrams.net/
 ![Alt text](image.png)
 
@@ -10,7 +10,7 @@ Link: https://app.diagrams.net/
 
 *Technologies*
 
--MongoDB -document database
+- MongoDB -document database
 - Express(.js) -Node.js web framework
 - Read(.js) - a client-side JavaScript framework
 - Node(.js) - the premier JavaScript web server
@@ -35,9 +35,9 @@ Link: https://app.diagrams.net/
 
 # Unsolved problems:
 
-- CORS stopping audio from playing
+- CORB stopping audio from playing with error; ***Cross-Origin Read Blocking (CORB) blocked cross-origin response***
 - Slide show stopped after resizing with error;  ***ResizeObserver loop completed with undelivered notifications***
-- Could not trace how a red border was applied to my welcome <span>
+- Could not trace how a red border was applied to my welcome <span> and 
 
 # Future Enhancements:
 
