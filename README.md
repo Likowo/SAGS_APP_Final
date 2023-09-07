@@ -30,14 +30,18 @@ Link: https://app.diagrams.net/
 - Project planning done on Trello board:
 *Link: https://trello.com/b/021wCbIm/mod-3-project-a-mern-stack-application*
 
-- Deployed on vercel:
-*Link:https://sags-app-final-7fxi3m7ny-likowo.vercel.app/*
+- Deployed on vercel and render:
+
+*Vercel.app Link:https://sags-app-final-7fxi3m7ny-likowo.vercel.app/*
+
+*Render.com Link: https://sags-app-final.onrender.com*
 
 # Unsolved problems:
 
 - CORB stopping audio from playing with error; ***Cross-Origin Read Blocking (CORB) blocked cross-origin response***
 - Slide show stopped after resizing with error;  ***ResizeObserver loop completed with undelivered notifications***
 - Could not trace how a red border was applied to my welcome <span> and 
+- Deployed app on vercel.app but updates not registered. Got alert in console. ***  Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings ***
 
 # Future Enhancements:
 
