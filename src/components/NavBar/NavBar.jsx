@@ -18,7 +18,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className='navBar'>
-      <p className='logoo'>
+      <p className='logoo' wrapper>
       <img src="https://images.unsplash.com/photo-1516383607781-913a19294fd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGVkdWNhdGlvbiUyMGFuZCUyMGVudGVydGFpbm1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60" className='logoImg' alt="logo" />
       <span id='CompName'>Sparkle Access Global Services <br /> (SAGS)</span>
       </p>

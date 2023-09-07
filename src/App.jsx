@@ -36,7 +36,6 @@ function App() {
             <Route path='/read/:id' element={ <ReadServiceInfor />} />
             <Route path='/delete/:id' element={ <ReadServiceInfor />} />
             <Route path='/' element={<LandingPage />} />
-
           </Routes>
         </>
       ) : (
