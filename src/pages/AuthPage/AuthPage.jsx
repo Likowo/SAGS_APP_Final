@@ -7,11 +7,11 @@ export default function AuthPage({ setUser }) {
   return (
     <main>
       <div>
-        <h3>Hi! SIGNUP or LOGIN</h3>
+        <h3 className='authHeader'>Hi! SIGNUP or LOGIN</h3>
         <button
           onClick={() => {
             setShowLogin(!showLogin);
-          }}
+          }} className='signUpBtn'
         >
           {showLogin ? 'Sign Up' : 'Login'}
         </button>

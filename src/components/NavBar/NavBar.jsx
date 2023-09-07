@@ -25,14 +25,14 @@ export default function NavBar({ user, setUser }) {
     
       <Link to='/'></Link>
       &nbsp; | &nbsp;
-      <Link to='/home'>HOME</Link>
+      <Link to='/home' className='navBarLinks' >HOME</Link>
       &nbsp; | &nbsp;
-      <Link to='/authpage' onClick={handleAuthPage}>LOG IN OR SIGN UP</Link>
+      <Link to='/authpage' onClick={handleAuthPage} className='navBarLinks' >LOG IN or SIGN UP</Link>
       &nbsp;|| &nbsp;
       { user  ? <span>Welcome, {user.name}</span> : ""}
       &nbsp; || &nbsp;
-      <Link to='' onClick={handleLogOut}>
-        Log Out
+      <Link to='' onClick={handleLogOut} className='navBarLinks' > 
+        LOG OUT
       </Link>
     </nav>
   );
