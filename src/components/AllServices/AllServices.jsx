@@ -36,15 +36,15 @@ function AllServices() {
 
   return (
     <div className="tableMainContainer">
-      <h1>All Services</h1>
+      <h1 className="allServicesHeader">★彡 Aͣl̾l̾ S̾eͤrͬv̾iͥcͨeͤs̾ 彡★</h1>
 
       <div className="w-75 rounded bg-red border shadow p-4">
         <div className="d-flex jsutify-content-end">
-          <Link to="/add" className="btn btn-success">
-           <button> Create a New Service</button>
+          <Link to="/add" className="createBtnLink">
+           <button className="createBtn"> Add New Service</button>
           </Link>
         </div>
-        <table className="table table-striped">
+        <table className="table-striped">
           <thead>
             <tr>
               {/* <th>ID</th> */}

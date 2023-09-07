@@ -9,22 +9,72 @@
   align-items: center;
   color: #00B4D8;
   text-decoration: none;
+  position: sticky;
 }
 
 .logoImg, .loggo {
   /* border: solid black 2px; */
-  height: 12dvh;
+  height: 8dvh;
   display: flex;
   padding:1px;
 }
 
-#name {
-  /* border: solid black 2px; */
-  height: 5dvh;
+#CompName {
+  border: solid #03045E 1px;
+  height: 4dvh;
   display: flex;
   font-size: 8px;
-  margin-top: -5px;
+  font-family: cursive;
 }
+
+.welcomeHeader {
+  font-size: 25px;
+  font-weight: bolder;
+  font-style: oblique;
+  font-family: fantasy;
+  color:#023E8A ;
+}
+
+.allServicesHeader {
+  font-style: oblique;
+  font-family: fantasy;
+  color:#023E8A ;
+}
+
+.createBtnLink, .createBtn {
+  display: flex;
+  justify-content: end;
+  text-decoration: none;
+  text-decoration-line: none;
+  background-color:#023E8A ;
+  color: rgb(54, 245, 54); 
+}
+
+.createBtn {
+  border: solid #00B4D8 2px;
+  background-color:green ;
+}
+
+.table-striped {
+  table-layout: fixed;
+  border: solid #00B4D8 2px;
+  background-color: #0077B6;
+}
+
+.tableMainContainer {
+  border: solid #023E8A 3px;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+}
+
+th, td {
+  height: 3dvh;
+  width: auto;
+  border: solid #023E8A 0.5px;
+}
+
 
 :root {
   --white: #FFFFFF;
