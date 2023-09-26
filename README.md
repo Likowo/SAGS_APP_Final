@@ -49,6 +49,7 @@ Link: https://app.diagrams.net/
 - Redo slide size so slide show can render. This will improve UI experience
 - Work on having boolean option show up for added services
 - Complete building pages for all current services being offered and make web app available to the public
+- Add Amin use to edit,add,update or delete a service.
 
 
 

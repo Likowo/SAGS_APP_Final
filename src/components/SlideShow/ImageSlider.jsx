@@ -1,8 +1,6 @@
 import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
-// import ImageSlider from '../../components/SlideShow/ImageSlider';
 import {Fade, Zoom, Slide, } from 'react-slideshow-image'
-
 
 const serviceImages = [
   {
@@ -26,32 +24,23 @@ const serviceImages = [
  ];
 
  const divStyle = {
-  height: "400px",
-  // width: "300px",
-  border:"solid black 2px",
-  backgroundsize: "cover",
-  background: "no-repeat",
-  display: "flex",
-  alignitems: "center",
-  justifyContent: "center"
-  // ["backgroundsize"]: "cover",
- }
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundSize: 'cover',
+  height: '400px'
+}
 
- const spanStyle = {
-  // height:"53px",
-  // width:"auto",
+const spanStyle = {
+  padding: '20px',
   fontSize: "20px",
-  padding: "20px",
-  color: "#00B4D8",
-  // background:"#efefef",
-  // margin:"2px",
-  // aligntext: "center",
-  // alignitems:"right"
- }
+  background: '#efefef',
+  color: '00b4d8'
+}
 
- const ImageSlider =() => { 
+function ImageSlider() {
   return (
-    <div className='slideContainer' >
+    <div>
       <>
         {serviceImages.map((pic, index)=> {
           return (
@@ -65,44 +54,5 @@ const serviceImages = [
     </div>
   )
 }
- 
-export default ImageSlider;
 
-////////////////////////////////
-// const resizeObserver = new ResizeObserver(entries => {
-//   // We wrap it in requestAnimationFrame to avoid this error - ResizeObserver loop limit exceeded
-//   window.requestAnimationFrame(() => {
-//     if (!Array.isArray(entries) || !entries.length) {
-//       return;
-//     }
-//     <Slide>
-//         {serviceImages.map((pic, index)=> {
-//           return (
-//                 <div key={index} >
-//                 <div style={{ ...divStyle, 'backgroundImage': `url(${pic.image})` }}>
-//                   <span style={spanStyle}>{pic.serviceType}</span>
-//                 </div>
-//             </div>)
-//         })}
-//       </Slide>
-//   });
-// });
-
-
-////////////////////////
-// const ImageSlider = () => { 
-//   return (
-//     <div className='slideContainer' >
-//       <Slide>
-//         {serviceImages.map((pic, index)=> {
-//           return (
-//                 <div key={index} >
-//                 <div style={{ ...divStyle, 'backgroundImage': `url(${pic.image})` }}>
-//                   <span style={spanStyle}>{pic.serviceType}</span>
-//                 </div>
-//             </div>)
-//         })}
-//       </Slide>
-//     </div>
-//   )
-// }
+export default ImageSlider

@@ -9,7 +9,8 @@
   align-items: center;
   color: #00B4D8;
   text-decoration: none;
-  position: sticky;
+  position: fixed;
+  top: 0;
 }
 
 .navBarLinks {

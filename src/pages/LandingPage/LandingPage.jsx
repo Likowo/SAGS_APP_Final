@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ImageSlider from '../../components/SlideShow/ImageSlider';
 import './LandingPage.module.css';
 import {Howl} from "howler";
+// import sound from "./assets/sound.wav"
 
 const audioTracks = [
     {
